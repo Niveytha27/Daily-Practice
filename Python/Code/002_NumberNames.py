@@ -5,11 +5,12 @@ Note: Use Western Naming System [Ones, Tens, Hundreds, Thousands, Millions, Bill
 
 # Imports
 import random
+from num2words import num2words
 
 
 # Core Logic
 def namer(num):
-    num_name = 'One'
+    num_name = num2words(num)
     return num_name
 
 
