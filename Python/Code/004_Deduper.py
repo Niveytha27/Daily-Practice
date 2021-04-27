@@ -8,7 +8,7 @@ def deduper(raw_string):
     return deduped_string
 
 # Driver
-base_string = 'abcdefghijklmnopqrstuvwxyz'
+base_string = 'abcdefabcdef'
 for i in range(25):
     raw_string = ''
     for char in base_string:
