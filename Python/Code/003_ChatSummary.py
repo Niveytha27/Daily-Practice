@@ -31,8 +31,8 @@ def summarizer(chatdata):
 
 
 def print_values(main_lst):
-    print('Collection Number|' + 'Conversation Number|' + ' Chat Starter|' + ' Chat Closer   |' +
-          'Chat Start time|' + 'Chat End time|' + 'Chat Duration(secs)')
+    print('Collection Number   |' + 'Conversation Number |' + 'Chat Starter        |' + 'Chat Closer         |' +
+          'Chat Start time     |' + 'Chat End time       |' + 'Chat Duration(secs) ')
 
     chat_dict = {}
     for sub_lst in main_lst:
@@ -56,7 +56,7 @@ def print_values(main_lst):
         d1 = datetime.strptime(chat_dict["Chat Start time"], fmt)
         d2 = datetime.strptime(chat_dict["Chat End time"], fmt)
         chat_dict["Chat Duration"] = int((d2 - d1).total_seconds())
-        result = "|".join(f"{value}" for value in chat_dict.values())
+        result = "|".join(f"{value}".ljust(20) for value in chat_dict.values())
         print(result)
 
 
