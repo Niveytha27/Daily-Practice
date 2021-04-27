@@ -6,8 +6,7 @@ import random
 def deduper(raw_string):
     deduped_string = ''
     for i in range(len(raw_string)):
-        if raw_string[i] != raw_string[(i+1) % len(raw_string)] and \
-                raw_string[i] not in deduped_string:
+        if raw_string[i] != raw_string[(i+1) % len(raw_string)]:
             deduped_string += raw_string[i]
     return deduped_string
 
